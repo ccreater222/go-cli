@@ -11,6 +11,7 @@ func Run() {
 	command := parsers.Subcommand()
 	if command == nil {
 		parsers.WriteHelp(os.Stderr)
+		return
 	}
 	command.(common.Command).Execute()
 }
