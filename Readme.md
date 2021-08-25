@@ -12,7 +12,7 @@ commands/
 main.go
 
 ```
-push.go:
+main.go:
 
 ```go
 package main
