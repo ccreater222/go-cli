@@ -1,14 +1,15 @@
-package main
+package cli
 
 import (
-	"github.com/ccreater222/go-cli/common"
 	"os"
+
+	"github.com/ccreater222/go-cli/common"
 )
 
-func Run()  {
+func Run() {
 	parsers := common.Args()
 	command := parsers.Subcommand()
-	if command == nil{
+	if command == nil {
 		parsers.WriteHelp(os.Stderr)
 	}
 	command.(common.Command).Execute()
